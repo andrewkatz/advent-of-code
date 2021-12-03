@@ -46,3 +46,6 @@ co2_scrubber_rating = find_value(diagnostic_report, most_common: false)
 life_support_rating = oxygen_generator_rating * co2_scrubber_rating
 
 puts "Life support rating: #{life_support_rating}"
+
+# Input 1: 230
+# Input 2: 1007985
