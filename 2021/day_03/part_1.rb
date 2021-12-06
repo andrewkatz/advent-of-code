@@ -1,13 +1,11 @@
 # frozen_string_literal: true
 
-require 'rubygems'
-require 'bundler/setup'
-require 'awesome_print'
+require_relative '../advent'
 
 bits = {}
 
-File.readlines(File.join(File.dirname(__FILE__), 'input_2.txt')).each do |line|
-  line.chomp.chars.each_with_index do |bit, index|
+input('day_03').each do |line|
+  line.chars.each_with_index do |bit, index|
     bits[index] ||= {}
     bits[index][bit] ||= 0
     bits[index][bit] += 1
@@ -29,3 +27,6 @@ epsilon_rate = epsilon_rate.join.to_i(2)
 power_consumption = gamma_rate * epsilon_rate
 
 puts "Power consumption: #{power_consumption}"
+
+# Input 1: 198
+# Input 2: 852500

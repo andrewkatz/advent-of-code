@@ -12,7 +12,7 @@ end
 
 lines = []
 
-input('day_05') do |line|
+input('day_05').each do |line|
   start, stop = line.chomp.split(' -> ')
   start = Point.new(start)
   stop = Point.new(stop)

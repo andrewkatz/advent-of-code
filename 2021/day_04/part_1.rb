@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
-require 'rubygems'
-require 'bundler/setup'
-require 'awesome_print'
+require_relative '../advent'
 
 class Number
   attr_reader :value
@@ -73,13 +71,13 @@ boards = []
 board_rows = []
 row_index = 0
 
-File.readlines(File.join(File.dirname(__FILE__), 'input_2.txt')).each_with_index do |line, index|
+input('day_04').each_with_index do |line, index|
   if index.zero?
-    drawn_numbers = line.chomp.split(',').map(&:to_i)
+    drawn_numbers = line.split(',').map(&:to_i)
     next
   end
 
-  board_rows << line.chomp.split.map(&:to_i) if row_index.nonzero?
+  board_rows << line.split.map(&:to_i) if row_index.nonzero?
   row_index += 1
   next if row_index < 6
 
@@ -100,3 +98,6 @@ drawn_numbers.each do |number|
   puts "Final score: #{final_score}"
   break
 end
+
+# Input 1: 4512
+# Input 2: 60368

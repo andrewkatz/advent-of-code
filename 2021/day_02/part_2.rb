@@ -1,10 +1,12 @@
 # frozen_string_literal: true
 
+require_relative '../advent'
+
 horizontal_position = 0
 depth = 0
 aim = 0
 
-File.readlines(File.join(File.dirname(__FILE__), 'input_2.txt')).each do |line|
+input('day_02').each do |line|
   command, units = line.chomp.split
   units = units.to_i
 
@@ -20,3 +22,6 @@ File.readlines(File.join(File.dirname(__FILE__), 'input_2.txt')).each do |line|
 end
 
 puts "Final position is #{horizontal_position} * #{depth} = #{horizontal_position * depth}"
+
+# Input 1: 900
+# Input 2: 2006917119

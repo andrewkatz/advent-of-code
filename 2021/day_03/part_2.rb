@@ -1,13 +1,11 @@
 # frozen_string_literal: true
 
-require 'rubygems'
-require 'bundler/setup'
-require 'awesome_print'
+require_relative '../advent'
 
 diagnostic_report = []
 
-File.readlines(File.join(File.dirname(__FILE__), 'input_2.txt')).each do |line|
-  diagnostic_report << line.chomp
+input('day_03').each do |line|
+  diagnostic_report << line
 end
 
 def find_value(report, most_common: true)
