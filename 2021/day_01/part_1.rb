@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-input = %w[
+input = %w(
   127
   147
   148
@@ -2001,7 +2001,7 @@ input = %w[
   8586
   8594
   8593
-].map(&:to_i)
+).map(&:to_i)
 
 increased_count = 0
 

@@ -7,7 +7,7 @@ require 'awesome_print'
 bits = {}
 
 File.readlines(File.join(File.dirname(__FILE__), 'input_2.txt')).each do |line|
-  line.chomp.split('').each_with_index do |bit, index|
+  line.chomp.chars.each_with_index do |bit, index|
     bits[index] ||= {}
     bits[index][bit] ||= 0
     bits[index][bit] += 1

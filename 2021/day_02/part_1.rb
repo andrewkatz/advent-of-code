@@ -4,7 +4,7 @@ horizontal_position = 0
 depth = 0
 
 File.readlines(File.join(File.dirname(__FILE__), 'input_2.txt')).each do |line|
-  command, units = line.chomp.split(' ')
+  command, units = line.chomp.split
   units = units.to_i
 
   case command
