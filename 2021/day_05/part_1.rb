@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
-require 'rubygems'
-require 'bundler/setup'
-require 'awesome_print'
+require_relative '../advent'
 
 class Point
   attr_reader :x, :y
@@ -14,7 +12,7 @@ end
 
 lines = []
 
-File.readlines(File.join(File.dirname(__FILE__), 'input_2.txt')).each do |line|
+input('day_05') do |line|
   start, stop = line.chomp.split(' -> ')
   start = Point.new(start)
   stop = Point.new(stop)
