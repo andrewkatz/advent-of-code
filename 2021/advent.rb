@@ -3,6 +3,7 @@
 require 'rubygems'
 require 'bundler/setup'
 require 'awesome_print'
+require 'colorize'
 
 def input(day)
   input_file = ARGV.first || '1'
